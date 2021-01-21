@@ -1,0 +1,23 @@
+{
+    "name": "Anaconda (Python 3)",
+    "image": "ghcr.io/octodemo-db/github-pyml-development-container:latest",
+
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.pythonPath": "/opt/conda/bin/python",
+        "python.linting.pylintEnabled": false,
+        "python.linting.enabled": false,
+        "python.linting.mypyEnabled": false,
+        "python.linting.pycodestyleEnabled": true,
+        "python.dataScience.alwaysTrustNotebooks": true,
+    },
+
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        "ms-python.python"
+    ],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "sudo /opt/conda/bin/conda install --name base seaborn matplotlib -y",
+}
