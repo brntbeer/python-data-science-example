@@ -1,0 +1,21 @@
+{
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "extensions": ["ms-python.python"],
+    "settings": {
+        "python.formatting.provider": "black",
+        "launch": {
+            "version": "0.2.0",
+            "configurations": [
+                {
+                    "name": "Launch octocat.py",
+                    "type": "python",
+                    "request": "launch",
+                    "stopOnEntry": true,
+                    "program": "${workspaceFolder}/octocat.py",
+                    "console": "integratedTerminal",
+                }
+            ]
+        }
+    }
+}
